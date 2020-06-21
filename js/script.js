@@ -10,29 +10,30 @@ const randomColour = () => Math.floor(Math.random() * 256);
 // Not using retrun keyword as arrow function one line doesn't need it
 
 
-function randomRGB () {
+function randomRGB() {
 
-const color = ;
+    const color = `rgb(${randomColour}, ${randomColour}, ${randomColour} )`;
+    return color;
+    // Without return it won't return or give any result remember always
+}
+
+
+for (let i = 1; i <= 10; i++) {
+
+    red = randomColour();
+    green = randomColour();
+    blue = randomColour();
+    randomRGB = `rgb( ${red}, ${green}, ${blue} )`;
+    html += `<div style="background-color: ${randomRGB}">${i}</div>`;
 
 }
 
 
-for(let i = 1; i <= 10; i++){
-
-red = randomColour();
-green = randomColour();
-blue = randomColour();
-randomRGB = `rgb( ${red}, ${green}, ${blue} )`;
-html += `<div style="background-color: ${randomRGB}">${i}</div>`;
-  
-}
 
 
 
 
 
-
- 
 
 
 document.querySelector('main').innerHTML = html;
@@ -103,9 +104,3 @@ blue = Math.floor(Math.random() * 256);
 randomRGB = `rgb( ${red}, ${green}, ${blue} )`;
 html += `<div style="background-color: ${randomRGB}">10</div>`;
 */
-
-
-
-
-
-
