@@ -1,18 +1,20 @@
 let html = '';
+
+/*
 let red;
 let green;
 let blue;
 let randomRGB;
+*/
 
-
-const randomColour = () => Math.floor(Math.random() * 256);
+const randomValue = () => Math.floor(Math.random() * 256);
 
 // Not using retrun keyword as arrow function one line doesn't need it
 
 
 function randomRGB() {
 
-    const color = `rgb(${randomColour}, ${randomColour}, ${randomColour} )`;
+    const color = `rgb( ${randomValue()}, ${randomValue()}, ${randomValue()} )`;
     return color;
     // Without return it won't return or give any result remember always
 }
@@ -20,20 +22,17 @@ function randomRGB() {
 
 for (let i = 1; i <= 10; i++) {
 
-    red = randomColour();
-    green = randomColour();
-    blue = randomColour();
+    /*
+    red = randomValue();
+    green = randomValue();
+    blue = randomValue();
     randomRGB = `rgb( ${red}, ${green}, ${blue} )`;
-    html += `<div style="background-color: ${randomRGB}">${i}</div>`;
+*/
+    // Reducing the code with helper functions outside to utilize DRY code principle
+
+    html += `<div style="background-color: ${randomRGB()}">${i}</div>`;
 
 }
-
-
-
-
-
-
-
 
 
 document.querySelector('main').innerHTML = html;
